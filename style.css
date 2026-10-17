@@ -117,3 +117,7 @@ html { -webkit-text-size-adjust: 100%; }
   .intro-note { margin-bottom: 6px; }
   .open-button { margin-top: 12px; }
 }
+
+/* A keepsake to save or share. */
+footer > a.pdf-download { position: static; display: flex; width: fit-content; height: auto; min-height: 44px; margin: 22px auto 0; border: 0; border-bottom: 1px solid #a5b6a4; border-radius: 0; gap: 12px; font-size: 12px; line-height: 1.6; }
+@media (max-width: 350px) { footer > a.pdf-download { font-size: 10px; gap: 8px; } }
