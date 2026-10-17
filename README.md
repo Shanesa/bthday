@@ -1,6 +1,6 @@
 # A little birthday love
 
-A personal digital birthday card for a wonderful brother and doctor. Designed in midnight blue, warm ivory and soft mint, with a portrait, a sister's letter, a playful birthday prescription and an interactive birthday candle.
+A personal digital birthday card for a wonderful doctor and a king with a heart of gold. Designed in midnight blue, warm ivory and soft mint, with a portrait, a sister's letter, a playful birthday prescription and an interactive birthday candle.
 
 ## Publish on GitHub Pages
 
