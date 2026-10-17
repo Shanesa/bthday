@@ -17,3 +17,103 @@
 @media(max-width:650px){.intro{padding-top:30px;padding-bottom:30px}.intro-content{padding:30px 0}.intro h1{font-size:43px}.intro .eyebrow{font-size:8px;letter-spacing:2px}.intro-top{font-size:7px!important}.intro-note{font-size:12px}.intro-bottom{font-size:6px;gap:12px;letter-spacing:1.1px}.intro-bottom svg{width:60px}.seal-icon{width:62px;height:62px;margin-bottom:23px}.seal-icon svg{width:38px;height:38px}.open-button{font-size:11px;padding:17px 23px}.topbar{height:71px;margin:0 7%}.wordmark{font-size:15px}.topbar-note{display:none}.replay{font-size:19px}.replay span{font-size:9px}.hero{display:flex;flex-direction:column;padding:41px 8% 56px;gap:37px;align-items:stretch}.hero .eyebrow{font-size:6.5px;letter-spacing:1.1px;gap:8px}.hero h2{font-size:75px;letter-spacing:-2px;margin:25px 0 20px}.hero h2 em{font-size:.66em;letter-spacing:-1.4px}.hero-description{font-size:12px;line-height:1.9}.text-link{margin-top:11px;font-size:10px}.hero-foot{display:none}.portrait-area{margin:0 10px 0 8px;padding-bottom:21px}.photo-frame{padding:9px 9px 0;transform:rotate(2deg)}.photo-frame img{height:auto;aspect-ratio:1/1.03;object-position:50% 35%}.photo-caption{font-size:7px;padding:10px 7px}.portrait-label{left:-9px;bottom:-4px;padding:14px 17px;gap:12px}.portrait-label strong{font-size:17px}.portrait-label div>span{font-size:7px}.portrait-label>svg{width:32px;height:32px}.label-star{font-size:22px;margin-left:8px}.spark-one{left:-23px;font-size:33px;top:20px}.spark-two{right:-19px;font-size:34px;bottom:63px}.vertical-note{right:-24px;font-size:6px;letter-spacing:1.5px}.ribbon{padding:18px 6%;gap:15px;justify-content:center;flex-wrap:wrap;font-size:6px;letter-spacing:1.1px}.ribbon span:nth-of-type(3),.ribbon span:nth-of-type(4),.ribbon i:nth-of-type(3),.ribbon i:nth-of-type(4){display:none}.ribbon i{font-size:16px}.section-pad{padding:64px 8%}.letter{display:block}.section-marker{margin-bottom:30px;display:flex;flex-direction:row;align-items:center;max-height:none;gap:10px}.section-marker span{font-size:7px}.section-marker svg{width:23px;height:23px}.letter-content>.eyebrow{font-size:6.5px;letter-spacing:1.4px}.letter h2{font-size:35px;margin:18px 0 29px;line-height:1.21;letter-spacing:-.9px}.letter-body p{font-size:12px;line-height:2;margin-bottom:19px}.letter-body .salutation{font-size:20px}.letter-body .letter-ending{font-size:17px;margin-top:27px}.letter-ending span{font-size:9px;line-height:1.7;margin-top:10px}.letter-flower{font-size:260px;bottom:-65px;right:-70px}.prescription-section{display:block;padding-bottom:66px}.prescription-intro>.eyebrow{font-size:7px;letter-spacing:1.8px}.prescription-intro h2{font-size:48px;margin:22px 0 20px}.prescription-intro>p:not(.eyebrow){font-size:12px}.big-stethoscope{width:65px;height:65px;margin:8px 0 0 5px}.hand-note{display:inline-block;font-size:11px;margin:0 0 0 14px;vertical-align:top;position:relative;top:35px}.prescription{margin:45px 1px 0;padding:25px 21px 20px;transform:rotate(1.4deg)}.rx-head{gap:10px;padding-bottom:17px}.rx{font-size:42px}.rx-head strong{font-size:14px}.rx-head div>span{font-size:6px;letter-spacing:1px}.rx-head svg{width:18px;height:18px}.rx-patient strong{font-size:15px}.rx-patient>span{font-size:7px}.rx-list li{padding:18px 0;gap:10px}.rx-list h3{font-size:11px}.rx-list p{font-size:9px}.rx-number{font-size:12px}.rx-footer>span:first-child{font-size:6px}.rx-sign{font-size:13px}.rx-joke{font-size:7px}.wish-section h2{font-size:42px}.wish-section>p:not(.eyebrow):not(.wish-result){font-size:12px}.wish-button{padding:17px 19px;font-size:10px}.wish-button span{margin-left:12px}.wish-result{font-size:13px;line-height:1.8}.cake-scene{margin-top:28px;margin-bottom:15px}footer{padding:32px 8% 37px}footer p{font-size:16px}footer>span{font-size:6px;letter-spacing:1.7px}footer>a{width:28px;height:28px;right:5%;top:23px;font-size:13px}}
 @media(max-width:360px){.hero h2{font-size:66px}.hero .eyebrow{font-size:5.7px}.intro h1{font-size:37px}.letter h2{font-size:30px}.rx-head strong{font-size:12px}.rx-head div>span{font-size:5px}.rx-list h3{font-size:10px}.wish-button{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.flame{transform:none}}
+
+/* Phone-first refinements: readable wishes, comfortable taps, and safe edges. */
+html { -webkit-text-size-adjust: 100%; }
+.intro { overflow-x: hidden; overscroll-behavior: contain; }
+.intro-top, .intro-bottom, .intro-content { flex-shrink: 0; }
+.intro { padding-top: max(24px, env(safe-area-inset-top)); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+.open-button, .wish-button, .relight-button, .replay, .text-link { touch-action: manipulation; }
+
+@media (max-width: 650px) {
+  .intro { padding-left: 22px; padding-right: 22px; }
+  .intro::before { width: 125vw; height: 125vw; }
+  .intro::after { width: 165vw; height: 165vw; }
+  .intro-content { width: 100%; padding: 28px 0; margin: auto 0; }
+  .intro h1 { font-size: clamp(36px, 10.6vw, 51px); }
+  .intro .eyebrow { font-size: 9px; letter-spacing: 1.5px; }
+  .intro-top { font-size: 8px !important; letter-spacing: 1.5px; }
+  .intro-note { font-size: 14px; line-height: 1.7; }
+  .open-button { min-height: 54px; width: 100%; max-width: 330px; font-size: 13px; }
+  .small-note { font-size: 11px; line-height: 1.6; }
+  .intro-bottom { font-size: 7px; letter-spacing: 1px; gap: 9px; }
+  .intro-bottom svg { width: 48px; flex-shrink: 0; }
+  .topbar { margin-inline: 6%; height: 68px; gap: 12px; }
+  .wordmark { font-size: 15px; }
+  .replay { min-width: 64px; min-height: 44px; padding: 8px 0 8px 8px; }
+  .replay span { font-size: 11px; }
+  .hero { min-height: auto; padding: 30px 7% 48px; gap: 27px; }
+  .hero .eyebrow { font-size: 9px; letter-spacing: 1.1px; white-space: normal; align-items: baseline; }
+  .live-dot { align-self: center; }
+  .hero h2 { font-size: clamp(60px, 17vw, 85px); margin: 20px 0; }
+  .hero h2 em { font-size: .66em; letter-spacing: -1.4px; }
+  .hero-description { font-size: 14px; line-height: 1.8; }
+  .text-link { min-height: 44px; font-size: 13px; margin-top: 0; padding: 8px 0; }
+  .portrait-area { margin-inline: 9px; }
+  .portrait-label { max-width: calc(100% + 10px); padding: 13px 15px; }
+  .portrait-label div { min-width: 0; }
+  .portrait-label div > span { font-size: 8px; letter-spacing: 1px; }
+  .portrait-label strong { font-size: 19px; }
+  .portrait-label > svg { flex-shrink: 0; }
+  .photo-caption { font-size: 9px; letter-spacing: 1.7px; }
+  .vertical-note { font-size: 7px; right: -22px; }
+  .ribbon { font-size: 8px; letter-spacing: 1px; gap: 11px; }
+  .section-pad { padding: 58px 7%; }
+  .section-marker span, .letter-content > .eyebrow,
+  .prescription-intro > .eyebrow, .wish-section > .eyebrow { font-size: 9px; letter-spacing: 1.3px; }
+  .section-marker { margin-bottom: 26px; }
+  .letter h2 { font-size: clamp(31px, 9vw, 45px); line-height: 1.2; letter-spacing: -.7px; }
+  .letter-body p { font-size: 15px; line-height: 1.9; margin-bottom: 23px; }
+  .letter-body .salutation { font-size: 23px; }
+  .letter-body .letter-ending { font-size: 20px; line-height: 1.6; }
+  .letter-ending span { font-size: 12px; line-height: 1.8; }
+  .prescription-intro h2 { font-size: clamp(43px, 12vw, 60px); }
+  .prescription-intro > p:not(.eyebrow) { font-size: 14px; }
+  .hand-note { font-size: 12px; margin-left: 10px; }
+  .prescription { padding: 27px 20px 23px; margin-top: 42px; }
+  .rx-head { gap: 10px; }
+  .rx-head div, .rx-list li > div { min-width: 0; }
+  .rx-head strong { font-size: 16px; line-height: 1.4; }
+  .rx-head div > span { font-size: 8px; letter-spacing: .8px; line-height: 1.8; }
+  .rx-head > svg { flex-shrink: 0; }
+  .rx-patient > span { font-size: 9px; }
+  .rx-patient strong { font-size: 17px; line-height: 1.5; }
+  .rx-list li { padding-block: 20px; gap: 10px; }
+  .rx-number { font-size: 14px; }
+  .rx-list h3 { font-size: 14px; line-height: 1.5; }
+  .rx-list p { font-size: 12px; line-height: 1.7; }
+  .rx-footer { flex-wrap: wrap; row-gap: 18px; }
+  .rx-footer > span:first-child { font-size: 8px; letter-spacing: 1px; }
+  .rx-sign { font-size: 15px; }
+  .rx-joke { font-size: 10px; line-height: 1.7; margin-top: 25px; }
+  .wish-section h2 { font-size: clamp(38px, 10.6vw, 52px); }
+  .wish-section > p:not(.eyebrow):not(.wish-result) { font-size: 14px; line-height: 1.9; }
+  .wish-button { width: 100%; max-width: 350px; min-height: 56px; padding: 15px 13px; font-size: 12px; line-height: 1.6; }
+  .wish-button span { margin-left: 7px; }
+  .wish-result { font-size: 15px; line-height: 1.8; }
+  .relight-button { min-height: 44px; font-size: 12px; }
+  footer { padding: 34px 7% max(38px, env(safe-area-inset-bottom)); }
+  footer p { font-size: 18px; line-height: 1.7; }
+  footer > span { display: block; font-size: 9px; letter-spacing: 1.3px; line-height: 1.8; }
+  footer > a { width: 44px; height: 44px; top: 15px; right: 5%; }
+}
+
+@media (max-width: 350px) {
+  .hero .eyebrow { font-size: 8px; letter-spacing: .8px; }
+  .ribbon { gap: 8px; font-size: 7px; }
+  .prescription { padding-inline: 16px; }
+  .rx-head strong { font-size: 14px; }
+  .rx-head div > span { font-size: 7px; }
+  .hand-note { font-size: 11px; margin-left: 4px; }
+  .wish-button { font-size: 11px; }
+}
+
+@media (max-width: 650px) and (max-height: 650px) {
+  .intro { padding-top: 20px; padding-bottom: 20px; }
+  .intro-content { padding-block: 22px; }
+  .seal-icon { width: 46px; height: 46px; margin-bottom: 14px; }
+  .seal-icon svg { width: 30px; height: 30px; }
+  .intro h1 { font-size: clamp(32px, 9.5vw, 44px); margin-block: 14px; }
+  .intro-note { margin-bottom: 6px; }
+  .open-button { margin-top: 12px; }
+}
